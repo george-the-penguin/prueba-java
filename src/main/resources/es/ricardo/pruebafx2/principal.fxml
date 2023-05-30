@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@newCascadeStyleSheet.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.ricardo.pruebafx2.Controlador">
+   <top>
+      <Pane nodeOrientation="LEFT_TO_RIGHT" prefHeight="75.0" prefWidth="600.0" style="-fx-background-color: #005680;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="imagenMysql" fitHeight="69.0" fitWidth="141.0" layoutX="8.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@mysql.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="etiquetaTitulo" layoutX="280.0" layoutY="9.0" minHeight="-Infinity" minWidth="0.0" prefHeight="50.0" prefWidth="302.0" text="Base de Datos de Usuarios" textFill="#4dc3ff">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <Pane prefHeight="249.0" prefWidth="461.0" style="-fx-background-color: #00AAFF;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="labelDni" layoutX="25.0" layoutY="25.0" text="DNI" />
+            <Label fx:id="labelNombre" layoutX="25.0" layoutY="76.0" text="Nombre" />
+            <Label fx:id="labelApellidos" layoutX="25.0" layoutY="137.0" text="Apellidos" />
+            <Label fx:id="labelMail" layoutX="25.0" layoutY="198.0" text="E-mail" />
+            <Label fx:id="labelPassword" layoutX="222.0" layoutY="198.0" text="Password" />
+            <Label fx:id="labelNotas" layoutX="222.0" layoutY="38.0" text="Notas" />
+            <TextField fx:id="textDni" layoutX="64.0" layoutY="19.0" prefHeight="24.0" prefWidth="131.0" promptText="Introduce tu dni" />
+            <TextField fx:id="textNombre" layoutX="26.0" layoutY="93.0" promptText="Introduce tu nombre" />
+            <TextField fx:id="textApellidos" layoutX="26.0" layoutY="155.0" promptText="Introduce tus apellidos" />
+            <TextField fx:id="textMail" layoutX="26.0" layoutY="216.0" promptText="Introduce tu mail" />
+            <PasswordField fx:id="passField" layoutX="220.0" layoutY="216.0" promptText="introduce tu pass" />
+            <TextArea fx:id="textNotas" layoutX="220.0" layoutY="55.0" prefHeight="99.0" prefWidth="204.0" promptText="Escribe cualquier nota" wrapText="true" />
+         </children>
+      </Pane>
+   </center>
+   <right>
+      <Pane prefHeight="235.0" prefWidth="139.0" style="-fx-background-color: #266280;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="4.0" layoutY="18.0" prefHeight="235.0" prefWidth="132.0">
+               <children>
+                  <Label fx:id="labelVbox" contentDisplay="RIGHT" prefHeight="50.0" prefWidth="110.0" text="Operaciones BD" textFill="#4dc3ff" />
+                  <Button fx:id="botonInsertar" disable="true" mnemonicParsing="false" onAction="#insertar" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #4DC3FF; -fx-border-color: #005580;" text="Insertar" />
+                  <Button fx:id="botonActualizar" disable="true" mnemonicParsing="false" onAction="#actualizar" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #4DC3FF; -fx-border-color: #005580;" text="Actualizar">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+                  <Button fx:id="botonEliminar" disable="true" mnemonicParsing="false" onAction="#eliminar" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #4DC3FF; -fx-border-color: #005580;" text="Eliminar" />
+               </children>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Pane>
+   </right>
+   <bottom>
+      <Pane prefHeight="67.0" prefWidth="600.0" style="-fx-background-color: #005580;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="botonBorrar" layoutX="26.0" layoutY="22.0" mnemonicParsing="false" onAction="#borrarDatos" prefHeight="20.0" prefWidth="90.0" style="-fx-background-color: #4DC3FF; -fx-border-color: white;" text="Borrar Datos">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <Label fx:id="infoLabel" layoutX="127.0" layoutY="7.0" prefHeight="50.0" prefWidth="289.0" textFill="WHITE" />
+            <ChoiceBox fx:id="boxIdioma" layoutX="479.0" layoutY="20.0" prefHeight="24.0" prefWidth="110.0" />
+            <Label layoutX="423.0" layoutY="24.0" text="Idioma" textFill="WHITE" />
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>
